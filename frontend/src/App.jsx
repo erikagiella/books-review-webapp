@@ -5,7 +5,12 @@ function App() {
 
   return (
     <>
-      <h1>Hello Books reviews site</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<h1>Home</h1>}>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
