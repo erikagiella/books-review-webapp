@@ -7,7 +7,12 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<h1>Home</h1>}>
+          <Route element={<DefaultLayout />} >
+            <Route index element={<Home />} />
+            <Route path="/books" element={<Books />} />
+            <Route path="/books/:id" element={<SingleBook />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
           </Route>
         </Routes>
       </BrowserRouter>
