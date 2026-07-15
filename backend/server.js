@@ -4,6 +4,14 @@ const PORT = process.env.API_SERVER_PORT || 3000;
 const booksRouter = require("./routes/books");
 const serverError = require("./middlewares/serverError");
 const notFound = require("./middlewares/notFound");
+const cors = require("cors");
+
+
+//enable CORS for localhost:5173
+app.use(cors({
+    origin: process.env.FRONTEND_SERVER_PORT || "http://localhost:5173",
+}));
+
 
 
 // register the static assets folder

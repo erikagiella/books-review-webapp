@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const bookController = require("../controllers/bookController");
 
-
 // [Index] Get route to fetch all books
 router.get("/", bookController.index);
 
